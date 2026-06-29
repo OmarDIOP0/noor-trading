@@ -1,0 +1,249 @@
+/* Police — Bricolage Grotesque (géométrique, robuste : esprit technique/BTP).
+   DOIT être importée avant tailwindcss. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   NoorTrading — Design system « BTP / Génie Civil »
+   Palette : béton clair · acier/ardoise · orange sécurité · bleu chantier
+   On conserve le système de la référence (cartes, icônes glow, modals, dark)
+   mais re-skinné aux codes du génie civil.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    --radius: 0.75rem;
+
+    /* Surfaces */
+    --bg:            #EEF1F4;   /* béton clair */
+    --surface:       #FFFFFF;
+    --ink:           #14202B;   /* acier/ardoise foncé — texte & titres */
+    --ink-soft:      rgba(20,32,43,0.62);
+    --ink-faint:     rgba(20,32,43,0.42);
+    --border:        rgba(20,32,43,0.10);
+    --hover:         rgba(234,91,12,0.06);
+
+    /* Accents */
+    --orange:        #EA5B0C;   /* orange sécurité — action principale */
+    --orange-h:      #C94D08;
+    --steel:         #2563EB;   /* bleu chantier */
+    --amber:         #F5A623;   /* hi-vis / avertissement */
+    --slate:         #475569;
+    --green:         #0E9F6E;   /* validé / publié */
+    --red:           #DC2626;
+
+    /* Tokens admin (consommés par les classes utilitaires ci-dessous) */
+    --admin-bg:      var(--bg);
+    --admin-surface: var(--surface);
+    --admin-ink:     var(--ink);
+    --admin-orange:  var(--orange);
+    --admin-orange-h:var(--orange-h);
+    --admin-border:  var(--border);
+    --admin-hover:   var(--hover);
+}
+
+@theme inline {
+    --font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+
+    --color-background: var(--bg);
+    --color-foreground: var(--ink);
+    --color-surface: var(--surface);
+    --color-border: var(--border);
+
+    --color-primary: var(--orange);
+    --color-primary-hover: var(--orange-h);
+    --color-steel: var(--steel);
+    --color-amber: var(--amber);
+    --color-slate: var(--slate);
+    --color-success: var(--green);
+    --color-danger: var(--red);
+    --color-ink-soft: var(--ink-soft);
+    --color-ink-faint: var(--ink-faint);
+
+    /* Couleurs des graphiques Recharts — palette BTP (jamais les défauts) */
+    --color-chart-1: var(--orange);
+    --color-chart-2: var(--steel);
+    --color-chart-3: var(--slate);
+    --color-chart-4: var(--amber);
+    --color-chart-5: var(--green);
+
+    --radius-md: var(--radius);
+    --radius-lg: calc(var(--radius) * 1.4);
+    --radius-xl: calc(var(--radius) * 1.9);
+}
+
+@layer base {
+    html { font-size: 15px; }
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+        color: var(--ink);
+    }
+    html, body { overflow-x: clip; max-width: 100%; }
+}
+
+/* ── Fond « plan / blueprint » : grille fine façon calque d'ingénieur ───────── */
+.admin-bg {
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(rgba(20,32,43,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20,32,43,0.045) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+}
+
+/* Cursor pointer sur les interactifs */
+.admin-scope a,
+.admin-scope button,
+.admin-scope [role="button"],
+.admin-scope select,
+.admin-scope label[for],
+.admin-scope .cursor-pointer { cursor: pointer; }
+
+/* ═══════════════ Composants ═══════════════ */
+@layer components {
+
+    /* ── Cartes ── */
+    .admin-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 1px 2px rgba(20,32,43,0.05);
+    }
+    .admin-card-hover { transition: transform .18s, box-shadow .18s; }
+    .admin-card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px -12px rgba(20,32,43,0.20);
+    }
+
+    /* ── Boutons ── */
+    .admin-btn-primary {
+        display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+        height: 44px; padding: 0 1.25rem;
+        border-radius: 10px;
+        background: var(--orange); color: #fff;
+        font-size: 14px; font-weight: 700; letter-spacing: .01em;
+        border: none; cursor: pointer; white-space: nowrap;
+        transition: background .18s, transform .18s, box-shadow .18s;
+    }
+    .admin-btn-primary:hover {
+        background: var(--orange-h); transform: translateY(-1px);
+        box-shadow: 0 8px 20px -6px rgba(234,91,12,0.45);
+    }
+    .admin-btn-primary:disabled { opacity: .5; pointer-events: none; }
+
+    .admin-btn-outline {
+        display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+        height: 44px; padding: 0 1.25rem;
+        border-radius: 10px;
+        background: transparent;
+        border: 1.5px solid rgba(20,32,43,0.18);
+        color: var(--ink-soft);
+        font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap;
+        transition: background .18s, border-color .18s, color .18s;
+    }
+    .admin-btn-outline:hover { background: var(--hover); border-color: var(--orange); color: var(--orange); }
+
+    .admin-btn-danger {
+        display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+        height: 44px; padding: 0 1.25rem;
+        border-radius: 10px;
+        background: var(--red); color: #fff;
+        font-size: 14px; font-weight: 700; border: none; cursor: pointer; white-space: nowrap;
+        transition: background .18s, transform .18s;
+    }
+    .admin-btn-danger:hover { background: #b91c1c; transform: translateY(-1px); }
+
+    .admin-btn-ghost {
+        display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+        height: 40px; padding: 0 .85rem; border-radius: 10px;
+        background: transparent; border: none; color: var(--ink-soft);
+        font-size: 14px; font-weight: 600; cursor: pointer;
+        transition: background .15s, color .15s;
+    }
+    .admin-btn-ghost:hover { background: var(--hover); color: var(--orange); }
+
+    /* ── Champs ── */
+    .input-field {
+        display: block; width: 100%; height: 2.875rem; padding: 0 .9rem;
+        border-radius: 10px; border: 1.5px solid var(--border);
+        background: var(--surface); color: var(--ink);
+        font-size: .9375rem; outline: none;
+        transition: border-color .15s, box-shadow .15s;
+    }
+    .input-field:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(234,91,12,0.14); }
+    .input-field::placeholder { color: var(--ink-faint); }
+    textarea.input-field { height: auto; padding: .7rem .9rem; line-height: 1.55; resize: vertical; }
+    select.input-field { appearance: none; padding-right: 2.25rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2314202B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat; background-position: right 12px center; }
+    .field-label { display:block; font-size: 12.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: .4rem; }
+
+    /* ── Badges de statut ── */
+    .admin-badge {
+        display: inline-flex; align-items: center; gap: .35rem;
+        padding: .2rem .6rem; border-radius: 9999px;
+        font-size: 11px; font-weight: 700; letter-spacing: .02em; white-space: nowrap;
+    }
+    .admin-badge-success { background: rgba(14,159,110,0.12); color: var(--green); }
+    .admin-badge-warning { background: rgba(245,166,35,0.15); color: #B97400; }
+    .admin-badge-danger  { background: rgba(220,38,38,0.10); color: var(--red); }
+    .admin-badge-info    { background: rgba(37,99,235,0.10); color: var(--steel); }
+    .admin-badge-muted   { background: rgba(20,32,43,0.06); color: var(--ink-soft); }
+
+    /* ── Skeleton ── */
+    .skeleton { border-radius: 8px; background: rgba(20,32,43,0.07); animation: pulse 1.4s ease-in-out infinite; }
+}
+
+/* ── Modal (backdrop blur ardoise) ── */
+@keyframes adminFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes adminSlideUp { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+@keyframes count-up { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.count-anim { animation: count-up .45s ease-out forwards; }
+
+.admin-modal-backdrop {
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(20,32,43,0.45);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    animation: adminFadeIn 180ms ease;
+    display: flex; align-items: center; justify-content: center; padding: 1rem;
+}
+.admin-modal-container {
+    background: var(--surface); border-radius: 18px; border: 1px solid var(--border);
+    box-shadow: 0 32px 80px -16px rgba(20,32,43,0.35);
+    width: 100%; max-height: 90vh; display: flex; flex-direction: column;
+    animation: adminSlideUp 220ms cubic-bezier(.4,0,.2,1); overflow: hidden;
+}
+
+/* Scrollbar fine */
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: rgba(20,32,43,0.25) transparent; }
+.scrollbar-thin::-webkit-scrollbar { width: 5px; height: 5px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(20,32,43,0.22); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MODE SOMBRE — data-theme="dark" (ardoise nuit / orange conservé)
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+    --bg:        #0E161E;
+    --surface:   #16212C;
+    --ink:       #E8EEF3;
+    --ink-soft:  rgba(232,238,243,0.66);
+    --ink-faint: rgba(232,238,243,0.40);
+    --border:    rgba(232,238,243,0.10);
+    --hover:     rgba(234,91,12,0.12);
+    color-scheme: dark;
+}
+[data-theme="dark"] .admin-bg {
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(rgba(232,238,243,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,238,243,0.04) 1px, transparent 1px);
+}
+[data-theme="dark"] .admin-card { box-shadow: 0 1px 2px rgba(0,0,0,0.4); }

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.client\\src\\site\\sections\\aboutsection.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|solutionrelative:noortrading.client\\src\\site\\sections\\aboutsection.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.client\\src\\router\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|solutionrelative:noortrading.client\\src\\router\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AboutSection.tsx",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\site\\sections\\AboutSection.tsx",
+              "RelativeDocumentMoniker": "noortrading.client\\src\\site\\sections\\AboutSection.tsx",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\site\\sections\\AboutSection.tsx",
+              "RelativeToolTip": "noortrading.client\\src\\site\\sections\\AboutSection.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-24T15:50:58.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\router\\index.tsx",
+              "RelativeDocumentMoniker": "noortrading.client\\src\\router\\index.tsx",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\router\\index.tsx",
+              "RelativeToolTip": "noortrading.client\\src\\router\\index.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-24T15:50:01.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.json",
+              "RelativeToolTip": "NoorTrading.Server\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-23T23:55:20.229Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

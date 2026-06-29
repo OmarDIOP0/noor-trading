@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:64354",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\..\\noortrading.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

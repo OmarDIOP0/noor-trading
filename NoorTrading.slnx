@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="noortrading.client/noortrading.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="NoorTrading.Server/NoorTrading.Server.csproj" />
+</Solution>

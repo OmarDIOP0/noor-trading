@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "noortrading.client",
+      "port": 64354,
+      "env": {
+        "DEV_HTTP": "1",
+        "ASPNETCORE_URLS": "https://localhost:7187"
+      }
+    }
+  ]
+}

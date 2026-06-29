@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   NoorTrading — SITE PUBLIC · Direction « Matière & Structure »
+   Béton brut + bois/lin/laiton · éditorial · serif Fraunces
+   Tokens scopés sous .site pour ne JAMAIS interférer avec le thème admin.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+.site {
+    /* Surfaces — béton */
+    --s-bg:        #EDE8DF;   /* béton clair / chaux */
+    --s-bg-2:      #E3DCD0;
+    --s-concrete:  #C9C2B6;
+    --s-surface:   #F6F2EA;
+    --s-ink:       #1C1814;   /* brun-noir encre */
+    --s-ink-soft:  rgba(28,24,20,0.66);
+    --s-ink-faint: rgba(28,24,20,0.42);
+    --s-line:      rgba(28,24,20,0.12);
+
+    /* Accents — Génie Civil (argile/ocre, structurel) & Déco (laiton/bois, chaud) */
+    --s-clay:      #BC6C3C;   /* argile / ocre — univers technique */
+    --s-clay-deep: #9B5430;
+    --s-brass:     #B08D57;   /* laiton — univers déco */
+    --s-forest:    #2F3A33;   /* vert structurel profond */
+    --s-blueprint: #3A5A78;   /* bleu de plan, discret */
+
+    /* Typo */
+    --s-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --s-sans:    'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --s-mono:    'Space Mono', ui-monospace, monospace;
+
+    background: var(--s-bg);
+    color: var(--s-ink);
+    font-family: var(--s-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+}
+
+/* Univers déco : bascule des accents (réutilise les mêmes composants) */
+.site .u-deco {
+    --s-clay: var(--s-brass);
+    --s-clay-deep: #8A6A3C;
+}
+
+.site ::selection { background: var(--s-clay); color: var(--s-surface); }
+
+/* ── Typographie ─────────────────────────────────────────────────────────── */
+.site h1, .site h2, .site h3 { font-family: var(--s-display); font-weight: 600; line-height: 1.02; letter-spacing: -0.02em; color: var(--s-ink); margin: 0; }
+.site .display-xl { font-size: clamp(2.8rem, 9vw, 7.5rem); font-weight: 600; }
+.site .display-lg { font-size: clamp(2.2rem, 6vw, 4.6rem); }
+.site .display-md { font-size: clamp(1.7rem, 4vw, 3rem); }
+.site .lead { font-size: clamp(1.05rem, 1.6vw, 1.35rem); color: var(--s-ink-soft); line-height: 1.6; }
+.site .italic-accent { font-style: italic; font-weight: 400; }
+
+/* Étiquette technique (façon cartouche de plan) */
+.site .kicker {
+    font-family: var(--s-mono); font-size: 0.72rem; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--s-clay); font-weight: 700;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+}
+.site .kicker::before {
+    content: ""; width: 28px; height: 1px; background: var(--s-clay); display: inline-block;
+}
+
+/* ── Grille blueprint (fond technique) ───────────────────────────────────── */
+.site .blueprint-grid {
+    background-image:
+        linear-gradient(var(--s-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--s-line) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+.site .blueprint-grid-fine {
+    background-image:
+        linear-gradient(rgba(28,24,20,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(28,24,20,0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+/* Texture béton (bruit léger via dégradés) */
+.site .concrete {
+    background-color: var(--s-concrete);
+    background-image:
+        radial-gradient(rgba(255,255,255,0.25) 0.5px, transparent 0.5px),
+        radial-gradient(rgba(28,24,20,0.05) 0.5px, transparent 0.5px);
+    background-size: 6px 6px, 9px 9px;
+    background-position: 0 0, 3px 4px;
+}
+
+/* ── Boutons ─────────────────────────────────────────────────────────────── */
+.site .btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-family: var(--s-sans); font-weight: 700; font-size: 0.95rem;
+    padding: 0.9rem 1.6rem; border-radius: 2px; cursor: pointer; border: none;
+    position: relative; overflow: hidden; transition: color .3s, background .3s;
+}
+.site .btn-solid { background: var(--s-ink); color: var(--s-surface); }
+.site .btn-solid:hover { background: var(--s-clay); }
+.site .btn-outline {
+    background: transparent; color: var(--s-ink);
+    box-shadow: inset 0 0 0 1.5px var(--s-ink);
+}
+.site .btn-outline:hover { background: var(--s-ink); color: var(--s-surface); }
+
+/* Cartouche / cadre technique (coins en équerre) */
+.site .cartouche { position: relative; }
+.site .cartouche::before, .site .cartouche::after {
+    content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+}
+.site .cartouche::before { top: 8px; left: 8px; border-top: 1.5px solid var(--s-clay); border-left: 1.5px solid var(--s-clay); }
+.site .cartouche::after  { bottom: 8px; right: 8px; border-bottom: 1.5px solid var(--s-clay); border-right: 1.5px solid var(--s-clay); }
+
+/* Lien souligné animé */
+.site .link-underline { position: relative; color: var(--s-ink); text-decoration: none; }
+.site .link-underline::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1.5px;
+    background: var(--s-clay); transform: scaleX(0); transform-origin: right; transition: transform .35s cubic-bezier(.7,0,.2,1);
+}
+.site .link-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* Numérotation de section façon plan (01 / 02 …) */
+.site .plan-index { font-family: var(--s-mono); font-size: 0.8rem; color: var(--s-ink-faint); letter-spacing: 0.1em; }
+
+/* Scrollbar */
+.site ::-webkit-scrollbar { width: 9px; }
+.site ::-webkit-scrollbar-thumb { background: var(--s-concrete); }
+
+/* Effet balayage / scan (QR + reveals) */
+@keyframes scan-sweep { 0% { transform: translateY(-100%); } 100% { transform: translateY(220%); } }
+
+/* will-change utilitaire */
+.site .gpu { will-change: transform, opacity; }
+
+/* ── Accessibilité : mouvement réduit ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .site *, .site *::before, .site *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
