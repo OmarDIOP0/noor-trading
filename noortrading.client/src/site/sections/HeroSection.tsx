@@ -27,11 +27,13 @@ export function HeroSection({ profile, settings }: { profile?: PublicProfile; se
                 <motion.div variants={container} initial="hidden" animate="show">
                     <motion.div variants={item} className="kicker mb-6">Portfolio · {(settings?.appName ?? "").toUpperCase()}</motion.div>
 
-                    <h1 className="display-xl" style={{ marginBottom: 8 }}>
-                        <motion.span variants={item} style={{ display: "block" }}>{first}</motion.span>
-                        <motion.span variants={item} className="italic-accent" style={{ display: "block", color: "var(--s-clay)" }}>
-                            {rest.join(" ")}
-                        </motion.span>
+                    <h1 className="display-xl" style={{ marginBottom: 8, lineHeight: 0.95 }}>
+                        <motion.span variants={item}>{first} </motion.span>
+                        {rest.length > 0 && (
+                            <motion.span variants={item} className="italic-accent" style={{ color: "var(--s-clay)" }}>
+                                {rest.join(" ")}
+                            </motion.span>
+                        )}
                     </h1>
 
                     {/* double identité */}

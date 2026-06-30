@@ -2,8 +2,21 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, MessageCircle, ArrowUpRight, type LucideIcon } from "lucide-react";
 import { Reveal, RevealWords } from "../components/Reveal";
 import { MagneticButton } from "../components/MagneticButton";
+import { DownloadCardButton } from "../components/DownloadCardButton";
 import { useReducedMotion } from "../hooks/useUiHooks";
+import { publicApi } from "../services/publicApi";
 import type { PublicProfile } from "../types";
+import type { CardData } from "@/lib/businessCard";
+
+/** Recharge les données publiques fraîches à chaque génération de carte. */
+async function loadCardData(): Promise<CardData> {
+    const b = await publicApi.getBundle();
+    return {
+        fullName: b.profile.fullName, title: b.profile.title, photoUrl: b.profile.photoUrl,
+        email: b.profile.email, phone: b.profile.phone, location: b.profile.location,
+        website: b.settings.publicUrl, appName: b.settings.appName, logoUrl: b.settings.logoUrl,
+    };
+}
 
 function waLink(phone?: string | null) {
     if (!phone) return null;
@@ -73,15 +86,24 @@ export function ContactSection({ profile }: { profile?: PublicProfile }) {
                     })}
                 </div>
 
-                {profile?.email && (
-                    <div className="mt-14 flex justify-center">
+                <div className="mt-14 flex flex-wrap justify-center items-center gap-4">
+                    {profile?.email && (
                         <MagneticButton as="a" href={`mailto:${profile.email}`} className="btn" >
                             <span style={{ background: "var(--s-clay)", color: "var(--s-surface)", padding: "1rem 2rem", display: "inline-flex", alignItems: "center", gap: ".6rem", fontWeight: 700 }}>
                                 <Mail size={18} /> Démarrer une collaboration
                             </span>
                         </MagneticButton>
-                    </div>
-                )}
+                    )}
+                    <DownloadCardButton
+                        loader={loadCardData}
+                        className="btn"
+                        style={{ background: "transparent", color: "var(--s-bg)", boxShadow: "inset 0 0 0 1.5px rgba(237,232,223,0.45)", padding: "1rem 1.6rem" }}
+                        label="Enregistrer sa carte de visite"
+                    />
+                </div>
+                <p style={{ textAlign: "center", marginTop: 12, fontFamily: "var(--s-mono)", fontSize: 11.5, color: "rgba(237,232,223,0.5)" }}>
+                    PDF ou JPG · QR « vCard » pour l'ajouter à vos contacts
+                </p>
             </div>
         </section>
     );

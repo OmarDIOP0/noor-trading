@@ -1,15 +1,29 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Settings, Save, Loader2, KeyRound, ShieldCheck } from "lucide-react";
+import { Settings, Save, Loader2, KeyRound, ShieldCheck, IdCard } from "lucide-react";
 import { toast } from "sonner";
 import { useSettings, useUpdateSettings, useUploadLogo } from "@/hooks/useSettings";
 import { useChangePassword } from "@/hooks/useAuth";
 import { PhotoUploader } from "@/components/shared/PhotoUploader";
 import { QrCodePanel } from "@/components/shared/QrCodePanel";
 import { ShareButton } from "@/components/shared/ShareButton";
+import { DownloadCardButton } from "@/site/components/DownloadCardButton";
 import { LoadingSkeleton } from "@/components/shared/LoadingSkeleton";
 import { AdminPageHeader, AdminIcon } from "@/components/admin/ui";
+import { profileApi } from "@/api/profile.api";
+import { settingsApi } from "@/api/settings.api";
 import type { UpdateSettingsRequest, ChangePasswordRequest } from "@/types";
+import type { CardData } from "@/lib/businessCard";
+
+/** Recharge profil + paramètres frais à chaque clic (aucune mise en cache). */
+async function loadCardData(): Promise<CardData> {
+    const [p, s] = await Promise.all([profileApi.get(), settingsApi.get()]);
+    return {
+        fullName: p.fullName, title: p.title, photoUrl: p.photoUrl,
+        email: p.email, phone: p.phone, location: p.location,
+        website: s.publicUrl, appName: s.appName, logoUrl: s.logoUrl,
+    };
+}
 
 export default function Parametres() {
     const { data: settings, isLoading } = useSettings();
@@ -105,6 +119,18 @@ export default function Parametres() {
                 appName={settings?.appName ?? "NoorTrading"}
                 shareMessage={settings?.mainTitle || "Découvrez notre portfolio Génie Civil & BTP."}
             />
+
+            {/* Carte de visite digitale */}
+            <div className="admin-card p-5">
+                <h3 className="flex items-center gap-2.5 mb-2" style={{ fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>
+                    <AdminIcon icon={IdCard} color="orange" size="sm" /> Carte de visite digitale
+                </h3>
+                <p style={{ fontSize: 13.5, color: "var(--ink-soft)", marginBottom: 16, maxWidth: 560 }}>
+                    Générée à la demande avec vos informations actuelles (profil + paramètres) et un QR code
+                    « vCard » à jour. Format 85×55 mm haute résolution.
+                </p>
+                <DownloadCardButton loader={loadCardData} className="admin-btn-primary" />
+            </div>
 
             {/* Mot de passe */}
             <form onSubmit={pwForm.handleSubmit(submitPassword)} className="admin-card p-5 space-y-4">

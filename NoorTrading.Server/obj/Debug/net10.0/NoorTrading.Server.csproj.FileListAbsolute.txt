@@ -169,3 +169,4 @@ C:\Users\itdevstg1\AppData\Local\Temp\nt_verify\NoorTrading.Server.runtimeconfig
 C:\Users\itdevstg1\AppData\Local\Temp\nt_verify\NoorTrading.Server.dll
 C:\Users\itdevstg1\AppData\Local\Temp\nt_verify\NoorTrading.Server.pdb
 C:\Users\itdevstg1\source\repos\NoorTrading\NoorTrading.Server\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\itdevstg1\source\repos\NoorTrading\NoorTrading.Server\obj\Debug\net10.0\NoorTrading.Server.sourcelink.json

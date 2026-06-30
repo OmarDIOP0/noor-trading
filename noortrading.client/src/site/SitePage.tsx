@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePublicBundle } from "./hooks/usePublicData";
 import { publicApi } from "./services/publicApi";
 import { Seo } from "./components/Seo";
@@ -15,12 +15,16 @@ import { QrSection } from "./sections/QrSection";
 
 export default function SitePage() {
     const { data, isLoading, isError } = usePublicBundle();
+    const tracked = useRef(false);
 
-    // Tracking de visite (source via ?source=qrcode|direct…)
+    // Tracking de visite — déclenché seulement quand le backend a répondu
+    // (évite un 502 au démarrage en F5). source via ?source=qrcode|direct…
     useEffect(() => {
+        if (!data || tracked.current) return;
+        tracked.current = true;
         const source = new URLSearchParams(window.location.search).get("source") || "direct";
         publicApi.trackVisit("/", source);
-    }, []);
+    }, [data]);
 
     if (isLoading) {
         return (

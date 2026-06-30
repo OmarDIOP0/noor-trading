@@ -19,6 +19,8 @@
     <PackageJsonDependenciesDateFns Condition="$(PackageJsonDependenciesDateFns) == ''">^4.1.0</PackageJsonDependenciesDateFns>
     <PackageJsonDependenciesFramerMotion Condition="$(PackageJsonDependenciesFramerMotion) == ''">^12.41.0</PackageJsonDependenciesFramerMotion>
     <PackageJsonDependenciesGsap Condition="$(PackageJsonDependenciesGsap) == ''">^3.15.0</PackageJsonDependenciesGsap>
+    <PackageJsonDependenciesHtml2canvas Condition="$(PackageJsonDependenciesHtml2canvas) == ''">^1.4.1</PackageJsonDependenciesHtml2canvas>
+    <PackageJsonDependenciesJspdf Condition="$(PackageJsonDependenciesJspdf) == ''">^4.2.1</PackageJsonDependenciesJspdf>
     <PackageJsonDependenciesLucideReact Condition="$(PackageJsonDependenciesLucideReact) == ''">^0.468.0</PackageJsonDependenciesLucideReact>
     <PackageJsonDependenciesQrcode Condition="$(PackageJsonDependenciesQrcode) == ''">^1.5.4</PackageJsonDependenciesQrcode>
     <PackageJsonDependenciesQrcodeReact Condition="$(PackageJsonDependenciesQrcodeReact) == ''">^4.2.0</PackageJsonDependenciesQrcodeReact>

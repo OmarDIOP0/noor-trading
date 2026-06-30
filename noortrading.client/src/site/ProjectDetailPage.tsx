@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Ruler, User2, Tag, type LucideIcon } from "lucide-react";
@@ -15,11 +15,14 @@ export default function ProjectDetailPage() {
     const { data: project, isLoading, isError } = usePublicProject(id);
     const { data: bundle } = usePublicBundle();
 
+    // Tracking déclenché seulement quand la réalisation a été chargée (anti-502 au démarrage)
+    const tracked = useRef(false);
     useEffect(() => {
-        if (!id) return;
+        if (!id || !project || tracked.current) return;
+        tracked.current = true;
         const source = new URLSearchParams(window.location.search).get("source") || "direct";
         publicApi.trackVisit(`/projets/${id}`, source, "Project", id);
-    }, [id]);
+    }, [id, project]);
 
     useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
