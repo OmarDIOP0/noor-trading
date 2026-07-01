@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\noortrading.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\noortrading.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\data\\datamigrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\data\\datamigrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\controllers\\analyticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.client\\src\\site\\sections\\aboutsection.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|solutionrelative:noortrading.client\\src\\site\\sections\\aboutsection.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.client\\src\\router\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{8CCAF20E-DA7B-D1F8-53E6-1BFA9CF0CEBB}|noortrading.client\\noortrading.client.esproj|solutionrelative:noortrading.client\\src\\router\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|c:\\users\\itdevstg1\\source\\repos\\noortrading\\noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DCCA8975-814A-B311-9073-F04D75CE803E}|NoorTrading.Server\\NoorTrading.Server.csproj|solutionrelative:noortrading.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +50,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "NoorTrading.Server\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T22:20:05.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataMigrator.cs",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Data\\DataMigrator.cs",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\Data\\DataMigrator.cs",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Data\\DataMigrator.cs",
+              "RelativeToolTip": "NoorTrading.Server\\Data\\DataMigrator.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T22:19:56.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\appsettings.Production.json",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.Production.json",
+              "RelativeToolTip": "NoorTrading.Server\\appsettings.Production.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-30T21:52:14.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AnalyticsController.cs",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Controllers\\AnalyticsController.cs",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\Controllers\\AnalyticsController.cs",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Controllers\\AnalyticsController.cs",
+              "RelativeToolTip": "NoorTrading.Server\\Controllers\\AnalyticsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T19:15:50.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.Development.json",
+              "RelativeToolTip": "NoorTrading.Server\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-30T19:08:08.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NoorTrading.Server",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\NoorTrading.Server.csproj",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\NoorTrading.Server.csproj",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\NoorTrading.Server.csproj",
+              "RelativeToolTip": "NoorTrading.Server\\NoorTrading.Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-30T18:11:50.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Program.cs",
+              "RelativeDocumentMoniker": "NoorTrading.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\Program.cs",
+              "RelativeToolTip": "NoorTrading.Server\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwHgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T17:53:39.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AboutSection.tsx",
               "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\site\\sections\\AboutSection.tsx",
               "RelativeDocumentMoniker": "noortrading.client\\src\\site\\sections\\AboutSection.tsx",
@@ -39,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "index.tsx",
               "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\noortrading.client\\src\\router\\index.tsx",
               "RelativeDocumentMoniker": "noortrading.client\\src\\router\\index.tsx",
@@ -47,19 +166,21 @@
               "RelativeToolTip": "noortrading.client\\src\\router\\index.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-24T15:50:01.072Z"
+              "WhenOpened": "2026-06-24T15:50:01.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.json",
               "RelativeDocumentMoniker": "NoorTrading.Server\\appsettings.json",
               "ToolTip": "C:\\Users\\itdevstg1\\source\\repos\\NoorTrading\\NoorTrading.Server\\appsettings.json",
               "RelativeToolTip": "NoorTrading.Server\\appsettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-23T23:55:20.229Z"
+              "WhenOpened": "2026-06-23T23:55:20.229Z",
+              "EditorCaption": ""
             }
           ]
         }

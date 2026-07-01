@@ -24,7 +24,7 @@ public static class DbInitializer
                 Id = 1,
                 AppName = "NoorTrading",
                 MainTitle = "Génie Civil & BTP — Portfolio",
-                PublicUrl = config["PublicUrl"] ?? "https://localhost:64354",
+                PublicUrl = config["PublicUrl"] ?? "https://aissatoufall.noorglobaltrading.net",
             });
         }
 

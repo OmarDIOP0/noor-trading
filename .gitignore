@@ -1,2 +1,8 @@
 .vs/
 .claude/
+
+# Secrets de production (connection string SQL Server, JWT, admin) — ne jamais committer
+**/appsettings.Production.json
+
+# Contenu utilisateur uploadé (images) — créé à l'exécution, jamais versionné
+NoorTrading.Server/wwwroot/uploads/

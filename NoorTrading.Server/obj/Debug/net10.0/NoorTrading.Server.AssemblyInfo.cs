@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NoorTrading.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c8d35fa7da5f711e476ebb207fd9008a5d2c05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+753156ee08baa729477bd2ed8e32ed74e8e7f492")]
 [assembly: System.Reflection.AssemblyProductAttribute("NoorTrading.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NoorTrading.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

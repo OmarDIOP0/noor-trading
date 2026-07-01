@@ -31,6 +31,7 @@ public class NoorTradingDbContext(DbContextOptions<NoorTradingDbContext> options
         // ── Profile + SocialLink ─────────────────────────────────────────────
         b.Entity<Profile>(e =>
         {
+            e.Property(x => x.Id).ValueGeneratedNever();   // singleton Id=1 (pas d'identity)
             e.Property(x => x.FullName).HasMaxLength(160);
             e.Property(x => x.Title).HasMaxLength(160);
             e.Property(x => x.Bio).HasMaxLength(4000);
@@ -98,6 +99,7 @@ public class NoorTradingDbContext(DbContextOptions<NoorTradingDbContext> options
         // ── AppSettings ──────────────────────────────────────────────────────
         b.Entity<AppSettings>(e =>
         {
+            e.Property(x => x.Id).ValueGeneratedNever();   // singleton Id=1 (pas d'identity)
             e.Property(x => x.AppName).HasMaxLength(120);
             e.Property(x => x.MainTitle).HasMaxLength(200);
             e.Property(x => x.PublicUrl).HasMaxLength(300);

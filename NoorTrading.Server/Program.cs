@@ -13,10 +13,11 @@ using NoorTrading.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ── EF Core (SQLite — fichier local, zéro config) ───────────────────────────────
-var connection = builder.Configuration.GetConnectionString("Default")
-                 ?? "Data Source=noortrading.db";
-builder.Services.AddDbContext<NoorTradingDbContext>(o => o.UseSqlite(connection));
+// ── EF Core (SQL Server) ────────────────────────────────────────────────────────
+var connection = builder.Configuration.GetConnectionString("DefaultConnection")
+                 ?? throw new InvalidOperationException(
+                     "Connection string 'DefaultConnection' introuvable (appsettings.{Environment}.json).");
+builder.Services.AddDbContext<NoorTradingDbContext>(o => o.UseSqlServer(connection));
 
 // ── Options ─────────────────────────────────────────────────────────────────────
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(JwtOptions.SectionName));
@@ -109,6 +110,10 @@ var app = builder.Build();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseDefaultFiles();
+// Sert les fichiers présents physiquement dans wwwroot À L'EXÉCUTION
+// (notamment wwwroot/uploads : photos profil/projets/logo uploadées via l'admin).
+// MapStaticAssets ne sert que les assets connus au build → insuffisant pour les uploads.
+app.UseStaticFiles();
 app.MapStaticAssets();
 
 if (app.Environment.IsDevelopment())
@@ -124,6 +129,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
+
+// ── Commande one-shot : migration des données SQLite → SQL Server ───────────────
+//    Usage : dotnet run -- migrate-data  (applique les migrations puis copie les données)
+if (args.Contains("migrate-data"))
+{
+    await DataMigrator.RunAsync(app.Services, app.Configuration);
+    return;
+}
 
 // ── Migrations + seed au démarrage ──────────────────────────────────────────────
 await DbInitializer.InitializeAsync(app.Services, app.Configuration);
